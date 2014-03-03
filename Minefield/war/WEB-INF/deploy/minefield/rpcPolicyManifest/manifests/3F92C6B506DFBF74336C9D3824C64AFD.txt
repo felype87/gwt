@@ -1,0 +1,2 @@
+serviceClass: com.felype.minefield.client.GreetingService
+path: C99FA2F9E2266A433F4037151F62BA55.gwt.rpc

@@ -1,0 +1,150 @@
+/** Add css rules here for your application. */
+/** Example rules used by the template application (remove for your app) */
+h1 {
+	font-size: 2em;
+	font-weight: bold;
+	color: #777777;
+	margin: 40px 0px 70px;
+	text-align: center;
+}
+
+.sendButton {
+	display: block;
+	font-size: 16pt;
+}
+
+/** Most GWT widgets already have a style name defined */
+.gwt-DialogBox {
+	width: 400px;
+}
+
+.dialogVPanel {
+	margin: 5px;
+}
+
+.serverResponseLabelError {
+	color: red;
+}
+
+/** Set ids using widget.getElement().setId("idOfElement") */
+#closeButton {
+	margin: 15px 6px 6px;
+}
+
+.popup {
+	background-color: gray;
+	border-color: gray gray gray gray;
+	border-width: 1px 3px 3px 1px;
+	border-style: solid solid solid solid;
+}
+
+.popup-item {
+	font-weight: normal;
+	font-size: 80%;
+}
+
+.button-context {
+	background: #e2e2e2; /* Old browsers */
+	background: -moz-linear-gradient(45deg, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%,
+		#fefefe 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #e2e2e2),
+		color-stop(50%, #dbdbdb), color-stop(51%, #d1d1d1),
+		color-stop(100%, #fefefe)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(45deg, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%,
+		#fefefe 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(45deg, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #fefefe
+		100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(45deg, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #fefefe
+		100%); /* IE10+ */
+	background: linear-gradient(45deg, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #fefefe
+		100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2',
+		endColorstr='#fefefe', GradientType=1);
+	/* IE6-9 fallback on horizontal gradient */
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.button-initial {
+	background: #e2e2e2; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%,
+		#fefefe 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #e2e2e2),
+		color-stop(50%, #dbdbdb), color-stop(51%, #d1d1d1),
+		color-stop(100%, #fefefe)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%,
+		#fefefe 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #fefefe
+		100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%,
+		#fefefe 100%); /* IE10+ */
+	background: linear-gradient(135deg, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #fefefe
+		100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2',
+		endColorstr='#fefefe', GradientType=1);
+	/* IE6-9 fallback on horizontal gradient */
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.button-revealed {
+	background: #fefefe; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #fefefe 0%, #fdfdfd 98%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #fefefe),
+		color-stop(98%, #fdfdfd)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg, #fefefe 0%, #fdfdfd 98%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg, #fefefe 0%, #fdfdfd 98%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg, #fefefe 0%, #fdfdfd 98%);
+	/* IE10+ */
+	background: linear-gradient(135deg, #fefefe 0%, #fdfdfd 98%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe',
+		endColorstr='#fdfdfd', GradientType=1);
+	/* IE6-9 fallback on horizontal gradient */
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.header {
+	height: 40px;
+	width: 100%;
+}
+
+.controls {
+	width: 100%;
+}
+
+.grid {
+	
+}
+
+.main {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@font-face {
+	font-family: digital7;
+	src: url(digital7.ttf);
+}
+
+.label {
+	font-family: digital7;
+	font-size: 36px;
+	color: #B60008;
+	margin: 15px;
+}
+
+.title{
+	
+}
+
+.button-level{
+	
+}
+
