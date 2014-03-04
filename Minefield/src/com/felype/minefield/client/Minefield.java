@@ -35,6 +35,7 @@ import com.google.gwt.user.client.ui.Widget;
 
 public class Minefield implements EntryPoint, ButtonField.MinefieldListener {
 
+	private static final String BUTTON_STYLE = "button";
 	private static final String TITLE_STYLE = "title";
 	private static final String DOUBT_CHARACTER = "?";
 	private static final String CLEAR_CHARACTER = "";
@@ -52,7 +53,6 @@ public class Minefield implements EntryPoint, ButtonField.MinefieldListener {
 	private static final String CONTROLS_STYLE = "controls";
 	private static final String HEADER_STYLE = "header";
 	private static final String GRID_STYLE = "grid";
-	
 
 	private ButtonField selectedBox;
 
@@ -81,9 +81,6 @@ public class Minefield implements EntryPoint, ButtonField.MinefieldListener {
 			}
 		};
 	};
-
-	private final GreetingServiceAsync greetingService = GWT
-			.create(GreetingService.class);
 
 	private Command doubtCommand = new Command() {
 		public void execute() {
@@ -182,7 +179,6 @@ public class Minefield implements EntryPoint, ButtonField.MinefieldListener {
 
 		mainLayout.add(topBar);
 		mainLayout.add(controlsLayout);
-		
 
 		RootPanel.get("main").add(mainLayout);
 
@@ -290,7 +286,6 @@ public class Minefield implements EntryPoint, ButtonField.MinefieldListener {
 
 		if (buttonField != null && !buttonField.isRevealed()) {
 			buttonField.setRevealed(true);
-			buttonField.setEnabled(false);
 			buttonField.addStyleName(BUTTON_REVEALED_STYLE);
 
 			if (buttonField.getType() == ButtonField.Type.BOMB) {
@@ -310,7 +305,15 @@ public class Minefield implements EntryPoint, ButtonField.MinefieldListener {
 				int bombsAround = countBombsAround(i, j, grid);
 
 				if (bombsAround > 0) {
-					buttonField.setText(String.valueOf(bombsAround));
+					String bombsText = String.valueOf(bombsAround);
+					buttonField.setText(bombsText);
+
+					if (bombsAround > 4) {
+						buttonField.addStyleName(BUTTON_STYLE + 4);
+					} else {
+						buttonField.addStyleName(BUTTON_STYLE + bombsAround);
+					}
+
 				}
 
 				if (bombsAround == 0) {
