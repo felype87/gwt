@@ -55,10 +55,12 @@ public class Minefield implements EntryPoint, ButtonField.MinefieldListener {
 	private static final String GRID_STYLE = "grid";
 
 	private ButtonField selectedBox;
+	private Button btnNewGame;
 
 	private Label labelCounter;
 	private Label labelTime;
 	private Label labelLevel;
+	private Label labelTitle;
 
 	private int selectedPossibleBombs;
 	private int correctSelectedBombs;
@@ -145,16 +147,18 @@ public class Minefield implements EntryPoint, ButtonField.MinefieldListener {
 		labelTime = new Label();
 		labelTime.setStyleName(LABEL_STYLE);
 
-		Label labelTitle = new Label("Minefield");
+		labelTitle = new Label("Minefield");
 		labelTitle.setStyleName(TITLE_STYLE);
+		labelTitle.setVisible(false);
 
-		Button btnNewGame = new Button("New Game", new ClickHandler() {
+		btnNewGame = new Button("New Game", new ClickHandler() {
 
 			@Override
 			public void onClick(ClickEvent event) {
-				new GameLevelDialog().show();
+				openNewGameDialog();
 			}
 		});
+		btnNewGame.setVisible(false);
 
 		labelLevel = new Label();
 
@@ -187,9 +191,16 @@ public class Minefield implements EntryPoint, ButtonField.MinefieldListener {
 			@Override
 			public void onEvent(NewGameEvent event) {
 				startGame(event.getGameLevel());
+
+				btnNewGame.setVisible(true);
+				labelTitle.setVisible(true);
 			}
 		});
 
+		openNewGameDialog();
+	}
+
+	private void openNewGameDialog() {
 		GameLevelDialog dialog = new GameLevelDialog();
 		dialog.center();
 		dialog.show();
@@ -420,6 +431,10 @@ public class Minefield implements EntryPoint, ButtonField.MinefieldListener {
 
 	@Override
 	public void onRightClick(Widget sender, Event event) {
+		if (selectedBox != null && !selectedBox.isRevealed()) {
+			selectedBox.setStyleName(BUTTON_INITIAL_STYLE);
+		}
+
 		selectedBox = (ButtonField) sender;
 
 		if (!selectedBox.isRevealed()) {
