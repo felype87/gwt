@@ -21,7 +21,7 @@
   <!-- Other module inherits                                      -->
 
   <!-- Specify the app entry point class.                         -->
-  <entry-point class='com.felype.minefield.client.Minefield'/>
+  <entry-point class='com.felype.minefield.client.MinefieldViewImpl'/>
 
   <!-- Specify the paths for translatable code                    -->
   <source path='client'/>

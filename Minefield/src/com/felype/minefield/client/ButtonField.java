@@ -7,40 +7,17 @@ import com.google.gwt.user.client.ui.Widget;
 
 public class ButtonField extends Button {
 
-	public interface MinefieldListener {
+	private int id;
+
+	public interface OnBrowserEventListener {
 		void onRightClick(Widget sender, Event event);
 	}
 
-	private Type type;
-
+	private OnBrowserEventListener listener;
 	private boolean revealed;
 
-	private MinefieldListener listener;
-
-	public static enum Type {
-		CLEAR, BOMB
-	}
-
 	public ButtonField() {
-		type = Type.CLEAR;
-
 		sinkEvents(Event.ONCONTEXTMENU);
-	}
-
-	public void setType(Type type) {
-		this.type = type;
-	}
-
-	public Type getType() {
-		return type;
-	}
-
-	public boolean isRevealed() {
-		return revealed;
-	}
-
-	public void setRevealed(boolean revealed) {
-		this.revealed = revealed;
 	}
 
 	@Override
@@ -56,7 +33,23 @@ public class ButtonField extends Button {
 		}
 	}
 
-	public void setMineFieldListener(MinefieldListener listener) {
+	public void setOnBrowserEventListener(OnBrowserEventListener listener) {
 		this.listener = listener;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setRevealed(boolean revealed) {
+		this.revealed = revealed;
+	}
+
+	public boolean isRevealed() {
+		return revealed;
 	}
 }

@@ -34,21 +34,21 @@ public class GameLevelDialog extends DialogBox {
 	void onClickEasy(ClickEvent e) {
 		this.hide();
 
-		Minefield.EVENT_BUS.fireEvent(new NewGameEvent(GameLevel.EASY));
+		MinefieldViewImpl.EVENT_BUS.fireEvent(new NewGameEvent(GameLevel.EASY));
 	}
 
 	@UiHandler("buttonMedium")
 	void onClickMedium(ClickEvent e) {
 		this.hide();
 
-		Minefield.EVENT_BUS.fireEvent(new NewGameEvent(GameLevel.MEDIUM));
+		MinefieldViewImpl.EVENT_BUS.fireEvent(new NewGameEvent(GameLevel.MEDIUM));
 	}
 
 	@UiHandler("buttonHard")
 	void onClickHard(ClickEvent e) {
 		this.hide();
 
-		Minefield.EVENT_BUS.fireEvent(new NewGameEvent(GameLevel.HARD));
+		MinefieldViewImpl.EVENT_BUS.fireEvent(new NewGameEvent(GameLevel.HARD));
 	}
 
 }
